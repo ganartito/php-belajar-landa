@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="tes.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+
+	<div class="jumbotron text-center">
+  		<h1>My First Bootstrap Page</h1>
+  		<p>Resize this responsive page to see the effect!</p> 
+	</div>
+  
+	<div class="container">
+		<div class="row">
+    		<div class="col-sm-4 kolom-6">
+      			<h3>Column 1</h3>
+      			<p>Lorem ipsum dolor..</p>
+      			<p>Ut enim ad..</p>
+    		</div>
+    		<div class="col-sm-4 kolom-12">
+      			<h3>Column 2</h3>
+      			<p>Lorem ipsum dolor..</p>
+      			<p>Ut enim ad..</p>
+    		</div>
+    		<div class="col-sm-4 kolom-6">
+      			<h3>Column 3</h3>        
+      			<p>Lorem ipsum dolor..</p>
+      			<p>Ut enim ad..</p>
+    		</div>
+  		</div>
+	</div>
+
+	<div ng-app="myApp" ng-init="firstName='John'" ng-controller="myCtrl">
+		<p>Name : <input type="text" ng-model="name"></p>
+		<h1>Hello {{name}}</h1>
+		
+		<br>
+
+		<p>Input something in the input box:</p>
+		<p>Name: <input type="text" ng-model="firstName"></p>
+		<p>You wrote: {{ firstName }}</p>
+		
+		<br>
+		
+		<p>Try to change the names.</p>
+		First Name: <input type="text" ng-model="firstNama"><br>
+		Last Name: <input type="text" ng-model="lastNama"><br>
+		Full Name: {{firstNama + " " + lastNama}}
+
+		<br>
+		<br>
+
+		<p>The url of this page is:</p>
+		<h3>{{myUrl}}</h3>
+	</div>
+
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('myCtrl', function($scope, $location) {
+    		$scope.firstNama= "John";
+    		$scope.lastNama= "Doe";
+    		$scope.myUrl = $location.absUrl();
+		});
+	</script>
+</body>
+</html>
