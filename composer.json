@@ -1,0 +1,16 @@
+{
+    "name": "ganar/magang-landa",
+    "description": "Latihan Composer",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "ganartito",
+            "email": "ganartito@gmail.com"
+        }
+    ],
+    "require": {
+        "nesbot/carbon": "^2.21",
+        "setasign/fpdf": "^1.8"
+    }
+}
